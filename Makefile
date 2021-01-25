@@ -1,8 +1,6 @@
 DOCKER_COMPOSE=docker-compose
 DOCKER_COMPOSE_RUN=docker-compose exec web
 
-lint:
-	-$(DOCKER_COMPOSE_RUN) bash -c "flake8 && isort --check"
 
 migrate:
 	-$(DOCKER_COMPOSE_RUN) ./manage.py migrate
